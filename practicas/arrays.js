@@ -1,3 +1,8 @@
+const animales = ["elefante , jirafa , mono"]
+let agregar = animales.push('perro');
+
+
+
 const divisores = (numero) => {
     let divisores = [];
     for (let i = 0; i <= numero; i++) {
