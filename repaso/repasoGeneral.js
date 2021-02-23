@@ -1,2 +1,6 @@
-const suma = (n,m) => n + m 
-console.log(suma(2,2))
+let n = 6
+while(15 < n){
+    console.log(n);
+    15--
+
+}
