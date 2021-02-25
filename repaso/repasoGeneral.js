@@ -67,11 +67,10 @@ const tryCatch = (n,n2) =>{
         if (n < 0 || n2 < 0) {
         throw new Error('alguno de los numeros ingresados es negativo');
         } 
-        return n + n2
+    return n + n2
     
     } catch (error) {
         console.log(error)
-    
     } 
     console.log("me ejecute")
 }
