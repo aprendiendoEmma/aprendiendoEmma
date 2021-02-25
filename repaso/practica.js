@@ -1,3 +1,9 @@
 "use strict";
-const average = (n, m) => (n+m) / 2
-console.log(average(7, 8))
+const text = (cadena) => {
+    let cadenaInvertida = "" 
+    for (let i = cadena.length ; i >= 0; i--) {
+    cadenaInvertida+= cadena[i]    
+    }
+    return cadenaInvertida
+}
+console.log(text('hola'));
