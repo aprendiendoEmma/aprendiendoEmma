@@ -1,12 +1,10 @@
 "use strict";
 
-let numero = parseInt(prompt('ingrese un numero del 1 al 10'));
-    if(numero === 7){
-    console.log('adivinaste');
+let numero = 20
+
+for (let i = 0; i < numero; i++) {
+    if(numero% i===0  && i%2===0){
+       console.log(i)
+
     }
-    if (numero> 7) {
-    console.log('te pasaste');
-    }
-    else{
-        console.log('te quedaste corto');
-    }
+}
