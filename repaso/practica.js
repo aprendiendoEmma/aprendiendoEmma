@@ -1,10 +1,14 @@
 "use strict";
+try{  
 
-let numero = 20
 
-for (let i = 0; i < numero; i++) {
-    if(numero% i===0  && i%2===0){
-       console.log(i)
-
-    }
+let numero= 10;
+   if (isNaN(numero)) {
+    throw new Error('numero no es un numero');
+   
+    console.log(numero*numero);
+  }
+}
+catch(error){
+console.log(`hubo un error en ${error}`)
 }
