@@ -14,6 +14,10 @@ class Persona {
         return false;
     }
 
+    gritarMiNombre() {
+        console.log(`HOLA ESTOY RE LOCO MI NOMBRE ES ${this.nombre}`)
+    }
+
     static cualEsMasJoven(persona, persona2){
         if(persona.edad < persona2.edad){
             return persona;
@@ -24,9 +28,14 @@ class Persona {
     }
 }
 
+const robarDatos= (persona)  => {
+    const { nombre, edad} = persona;
+
+    console.log(nombre, edad)
+}
+
 const otro = new Persona(23, 'emma'); 
 
 const persona = new Persona(2 , 'Marcos');
-console.log(persona.masJovenQue(otro));
 
-console.log(Persona.cualEsMasJoven(otro, persona));
+robarDatos(persona);
