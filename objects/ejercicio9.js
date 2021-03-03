@@ -1,30 +1,56 @@
 'use strict';
 
-let numeros = [1,2,3,];
+class Persona {
+    constructor(edad, nombre) {
+        this.edad = edad;
+        this.nombre = nombre;
+    }
+    
+    masJovenQue(otro) {
+        if (this.edad < otro.edad) {
+            return true;
+        }
+        return false;
+    }
 
-let [uno, dos, tres,] = numeros
-console.log(uno, dos, tres);
+    gritarMiNombre() {
+        console.log(`HOLA ESTOY RE LOCO MI NOMBRE ES ${this.nombre}`)
+    }
 
-let persona = {
-    nom: 'emma',
-    apell: 'perez'
+    static cualEsMasJoven(persona, persona2){
+        if(persona.edad < persona2.edad){
+            return persona;
+        }
+        else{
+            return persona2;
+        }
+    }
 }
 
-console.log(persona)
+class Agenda{
+    constructor(){
+        this.contactos =[];
+        this.telefonos = [];
+    }
+    guardar(contacto, telefono){
+        this.contactos.push(contacto);
+        this.telefonos.push(telefono)
+    }
 
-let {nom} = persona;
-console.log(nom);
+    mostrar(){
+        console.log(this.contactos);
+        console.log(this.telefonos);
 
+    }
 
-
- let persona2 ={
-    ...persona,
-    email: 'emma97perez97',
- }
- console.log(persona2)
-
-
- let arr = [1,2,3,4,5];
- let arra2 = [6,7,8,9,];
- let array3 = [...arr, ...arra2];
- console.log(array3)
+    eliminar(contacto){
+    this.contactos.splice(this.contactos.indexOf(contacto),1);
+   
+    }
+}
+let persona1 = new Persona(23, 'emma')
+let persona2 = new Persona(24, 'marcos')
+let agenda = new Agenda();
+agenda.guardar(persona1,'12312' );
+agenda.mostrar()
+agenda.eliminar(persona1)
