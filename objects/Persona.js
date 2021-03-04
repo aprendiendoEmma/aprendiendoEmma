@@ -1,41 +1,19 @@
 'use strict';
 
 class Persona {
-    constructor(edad, nombre) {
-        this.edad = edad;
+    constructor (nombre, edad) {
         this.nombre = nombre;
-        this.info = `hola soy ${this.nombre} y tengo ${this.edad} anios`;
+        this.edad = edad
     }
-    
-    masJovenQue(otro) {
+
+    masJovenQue(otro){
         if (this.edad < otro.edad) {
-            return true;
+            return true
         }
-        return false;
+        return false
     }
-
-    gritarMiNombre() {
-        console.log(`HOLA ESTOY RE LOCO MI NOMBRE ES ${this.nombre}`)
-    }
-
-    static cualEsMasJoven(persona, persona2){
-        if(persona.edad < persona2.edad){
-            return persona;
-        }
-        else{
-            return persona2;
-        }
-    }
+    y 
 }
 
-const robarDatos= (persona)  => {
-    const { nombre, edad} = persona;
 
-    console.log(nombre, edad)
-}
 
-const otro = new Persona(23, 'emma'); 
-
-const persona = new Persona(2 , 'Marcos');
-
-robarDatos(persona);
