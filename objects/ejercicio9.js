@@ -45,12 +45,17 @@ class Agenda{
 
     eliminar(contacto){
     this.contactos.splice(this.contactos.indexOf(contacto),1);
-   
+    this.telefonos.splice(this.contactos.indexOf(contacto),1);
+
     }
 }
-let persona1 = new Persona(23, 'emma')
-let persona2 = new Persona(24, 'marcos')
+let persona1 = new Persona(23, 'emma');
+let persona2 = new Persona(24, 'marcos');
+let persona3 = new Persona(24 , 'cristian');
 let agenda = new Agenda();
-agenda.guardar(persona1,'12312' );
+agenda.guardar(persona1,'495997' );
+agenda.guardar(persona2,'493927' );
+agenda.guardar(persona3,'44444' );
 agenda.mostrar()
-agenda.eliminar(persona1)
+agenda.eliminar(persona3)
+agenda.mostrar()

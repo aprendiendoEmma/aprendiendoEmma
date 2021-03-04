@@ -5,7 +5,7 @@ h1{
     padding: 10px 20px;
     display: inline-block;
     text-align: center;
-    border: 5px inset rebeccapurple;
+    border: 5px inset rgb(141, 135, 128);
     box-shadow: 50px 10px;
     border-radius: 50px;
 
