@@ -12,8 +12,11 @@ class Persona {
         }
         return false
     }
-    y 
+    
 }
+
+
+console.log(Date())
 
 
 
