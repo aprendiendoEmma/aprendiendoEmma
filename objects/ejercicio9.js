@@ -48,14 +48,29 @@ class Agenda{
     this.telefonos.splice(this.contactos.indexOf(contacto),1);
 
     }
+    
+    pertenece(persona){
+         let estaEnlaAgenda = null;
+         this.contactos.forEach(contacto => {
+             if (contacto === persona) {
+                 estaEnlaAgenda = persona
+             }
+         });
+         if (estaEnlaAgenda) {
+             return true
+         }
+         return false
+         
+    }
+
 }
 let persona1 = new Persona(23, 'emma');
 let persona2 = new Persona(24, 'marcos');
 let persona3 = new Persona(24 , 'cristian');
+let persona4 = new Persona(24 ,'estefania');
 let agenda = new Agenda();
 agenda.guardar(persona1,'495997' );
 agenda.guardar(persona2,'493927' );
 agenda.guardar(persona3,'44444' );
 agenda.mostrar()
-agenda.eliminar(persona3)
-agenda.mostrar()
+console.log(agenda.pertenece(persona2))
