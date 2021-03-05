@@ -63,6 +63,11 @@ class Agenda{
          
     }
 
+
+    dameTelefono(Persona){
+        
+    }
+
 }
 let persona1 = new Persona(23, 'emma');
 let persona2 = new Persona(24, 'marcos');
@@ -74,3 +79,11 @@ agenda.guardar(persona2,'493927' );
 agenda.guardar(persona3,'44444' );
 agenda.mostrar()
 console.log(agenda.pertenece(persona2))
+
+
+
+(function(e,m,c){
+console.log(e);
+console.log(m);
+console.log(c);
+})('emma' , 'marcos','cristian');
