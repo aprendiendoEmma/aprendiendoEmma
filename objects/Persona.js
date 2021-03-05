@@ -27,23 +27,28 @@ class Persona {
         });
         return masChico
     }
-<<<<<<< HEAD
+
+
+      static buscar(grupo, nombre){
+          let encontrado = ""
+        grupo.forEach(persona => {
+            if (persona.nombre === nombre) {
+                encontrado = persona.nombre         
+            }        
+        });
+        return encontrado
+    }
     
-=======
->>>>>>> b4bacc9de1f4d86af28abcdcb3cdc3b4c3bcec21
 }
-
-
-console.log(Date())
-
-
 
 const persona1 = new Persona ('marcos', 45);
 const persona2 = new Persona ('emma', 23);
 const persona3 = new Persona ('guille', 25);
 const persona4 = new Persona ('cristian', 3);
 let grupo = [persona1,persona2,persona3,persona4];
-/*console.log(persona1.masJovenQue(persona2));
-console.log(persona1.tocayo(persona2));
-console.log(persona1.mismaPersona2(persona1));*/
-console.log(Persona.masJoven(grupo));
+let nombre = 'martin'
+// console.log(persona1.masJovenQue(persona2));
+// console.log(persona1.tocayo(persona2));
+// console.log(persona1.mismaPersona2(persona1)) 
+// console.log(Persona.masJoven(grupo));
+// console.log(Persona.buscar(grupo,nombre));
