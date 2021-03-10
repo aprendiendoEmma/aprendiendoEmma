@@ -64,8 +64,8 @@ class Agenda{
     }
 
 
-    dameTelefono(Persona){
-        
+    dameTelefono(contacto){
+        this.contactos[this.telefonos.indexOf(contacto)]
     }
 
 }
@@ -79,11 +79,6 @@ agenda.guardar(persona2,'493927' );
 agenda.guardar(persona3,'44444' );
 agenda.mostrar()
 console.log(agenda.pertenece(persona2))
+console.log(dameTelefono(persona1))
 
 
-
-(function(e,m,c){
-console.log(e);
-console.log(m);
-console.log(c);
-})('emma' , 'marcos','cristian');
