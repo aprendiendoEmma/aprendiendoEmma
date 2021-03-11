@@ -64,7 +64,13 @@ class Agenda{
     }
 
 
-    dameTelefono(Persona){
+     dameTelefono(persona) {
+        if (this.pertenece(persona)) {
+            return this.telefonos[this.contactos.indexOf(persona)]
+            
+        }
+         throw new Error('persona inexistente en la base de datos')
+        
         
     }
 
@@ -78,12 +84,7 @@ agenda.guardar(persona1,'495997' );
 agenda.guardar(persona2,'493927' );
 agenda.guardar(persona3,'44444' );
 agenda.mostrar()
-console.log(agenda.pertenece(persona2))
+console.log(agenda.pertenece(persona1))
+console.log(agenda.dameTelefono(persona4))
 
 
-
-(function(e,m,c){
-console.log(e);
-console.log(m);
-console.log(c);
-})('emma' , 'marcos','cristian');
